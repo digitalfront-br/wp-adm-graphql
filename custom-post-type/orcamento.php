@@ -1,8 +1,8 @@
 <?php 
-function edit_cnt_conteudoEditado( $labels ) {
-  $post_type = 'Conteudo';
-  $plural = 'Conteudos';
-
+function edit_cnt_orcamento( $labels ) {
+  $post_type = 'Orcamento';
+  $plural = 'Orcamentos';
+  
   $labels->name = __( $plural, 'post-para-' . $post_type );
   $labels->singular_name = __( $post_type, 'post-para-' . $post_type );
   $labels->add_new = __( 'Adicionar nova', 'post-para-' . $post_type );
@@ -14,7 +14,7 @@ function edit_cnt_conteudoEditado( $labels ) {
   $labels->search_items = __( 'Pesquisar ' . $post_type, 'post-para-' . $post_type );
   $labels->not_found = __( 'Nenhum ' . $post_type . 'encontrada.', 'post-para-' . $post_type );
   $labels->not_found_in_trash = __( 'Nenhum ' . $post_type . 'encontrada na lixeira.', 'post-para-' . $post_type );
-  $labels->all_items = __( 'Todas as ' . $plural, 'post-para-' . $post_type );
+  $labels->all_items = __( 'Todos os ' . $plural, 'post-para-' . $post_type );
   $labels->archives = __( 'Arquivos de ' . $plural, 'post-para-' . $post_type );
   $labels->attributes = __( 'Atributos da ' . $post_type, 'post-para-' . $post_type );
   $labels->insert_into_item = __( 'Inserir no ' . $post_type, 'post-para-' . $post_type );
@@ -24,10 +24,10 @@ function edit_cnt_conteudoEditado( $labels ) {
   $labels->items_list = __( 'Lista de ' . $plural, 'post-para-' . $post_type );
   $labels->menu_name = __( $plural, 'post-para-' . $post_type );
   $labels->name_admin_bar = __($post_type, 'post-para-' . $post_type );
+  $labels->menu_icon = __( 'dashicons-format-aside', 'post-para-orcamentos' . $post_type );
   // https://developer.wordpress.org/resource/dashicons/
-  $labels->menu_icon = __('dashicons-format-aside', 'post-para-' . $post_type);
 
   return $labels;
 }
-add_filter('post_type_labels_post', 'edit_cnt_conteudoEditado');
+add_filter('post_type_labels_post', 'edit_cnt_orcamento');
 ?>

@@ -2,8 +2,8 @@
 
 $base_theme = get_template_directory();
 
-require_once($base_theme . "/custom-post-type/conteudo.php");
-require_once($base_theme . "/custom-post-type/conteudoEditado.php");
+require_once($base_theme . "/custom-post-type/produto.php");
+require_once($base_theme . "/custom-post-type/orcamento.php");
 
 // function expire_token() {
 //   return time() + (60 * 60 * 24);

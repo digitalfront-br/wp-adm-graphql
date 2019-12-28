@@ -1,7 +1,7 @@
 <?php
-function reg_cnt_conteudo() {
-  $post_type = 'Conteudo';
-  $plural = 'Conteudos';
+function reg_cnt_produto() {
+  $post_type = 'Produto';
+  $plural = 'Produtos';
   $descricao = 'Um novo conteudo do tipo '. $post_type . ' para ser customizado.';
   register_post_type(strtolower($post_type), array(
     'label'  =>  $post_type,
@@ -33,12 +33,13 @@ function reg_cnt_conteudo() {
     ),
     'query_var' => true,
     'show_ui'   => true,
-    'menu_icon' => 'dashicons-welcome-learn-more',
+    // https://developer.wordpress.org/resource/dashicons/
+    'menu_icon' => 'dashicons-tablet',
     'show_in_graphql' => true,
     'graphql_single_name' => $post_type,
     'graphql_plural_name' => $plural,
   ));
 }
-add_action('init', 'reg_cnt_conteudo');
+add_action('init', 'reg_cnt_produto');
 
 ?>
